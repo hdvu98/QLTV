@@ -54,15 +54,22 @@ namespace LibraryManagement
         private void btnQLSach_Click(object sender, EventArgs e)
         {
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Book());
+            UC_Book uc_book = new UC_Book();
+            control_area.Controls.Add(uc_book);
             toggler(sender);
+            uc_book.LoadDataBOOK();
+            uc_book.LoadDataBOOK_TYPE();
+            uc_book.LoadDataPUBLISHING_HOUSE();
         }
 
         private void btnQLDocGia_Click(object sender, EventArgs e)
         {
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Reader());
+            UC_Reader uc_reader = new UC_Reader();
+            control_area.Controls.Add(uc_reader);
             toggler(sender);
+            uc_reader.LoadDataREADER();
+      
         }
 
         private void btnQLPhieu_Click(object sender, EventArgs e)
