@@ -81,60 +81,63 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fm_DangNhap.cs">
+    <Compile Include="BUS\LibraryBUS.cs" />
+    <Compile Include="DAO\LibraryDAO.cs" />
+    <Compile Include="DAO\ProcessData.cs" />
+    <Compile Include="UI\fm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fm_DangNhap.Designer.cs">
+    <Compile Include="UI\fm_DangNhap.Designer.cs">
       <DependentUpon>fm_DangNhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="fm_Dashboard.cs">
+    <Compile Include="UI\fm_Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fm_Dashboard.Designer.cs">
+    <Compile Include="UI\fm_Dashboard.Designer.cs">
       <DependentUpon>fm_Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UC_Admin.cs">
+    <Compile Include="UI\UC_Admin.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Admin.Designer.cs">
+    <Compile Include="UI\UC_Admin.Designer.cs">
       <DependentUpon>UC_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Book.cs">
+    <Compile Include="UI\UC_Book.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Book.Designer.cs">
+    <Compile Include="UI\UC_Book.Designer.cs">
       <DependentUpon>UC_Book.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Form.cs">
+    <Compile Include="UI\UC_Form.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Form.Designer.cs">
+    <Compile Include="UI\UC_Form.Designer.cs">
       <DependentUpon>UC_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Profile.cs">
+    <Compile Include="UI\UC_Profile.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Profile.Designer.cs">
+    <Compile Include="UI\UC_Profile.Designer.cs">
       <DependentUpon>UC_Profile.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Reader.cs">
+    <Compile Include="UI\UC_Reader.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Reader.Designer.cs">
+    <Compile Include="UI\UC_Reader.Designer.cs">
       <DependentUpon>UC_Reader.cs</DependentUpon>
     </Compile>
-    <Compile Include="UC_Stat.cs">
+    <Compile Include="UI\UC_Stat.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UC_Stat.Designer.cs">
+    <Compile Include="UI\UC_Stat.Designer.cs">
       <DependentUpon>UC_Stat.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="fm_DangNhap.resx">
+    <EmbeddedResource Include="UI\fm_DangNhap.resx">
       <DependentUpon>fm_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fm_Dashboard.resx">
+    <EmbeddedResource Include="UI\fm_Dashboard.resx">
       <DependentUpon>fm_Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -147,22 +150,22 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UC_Admin.resx">
+    <EmbeddedResource Include="UI\UC_Admin.resx">
       <DependentUpon>UC_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Book.resx">
+    <EmbeddedResource Include="UI\UC_Book.resx">
       <DependentUpon>UC_Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Form.resx">
+    <EmbeddedResource Include="UI\UC_Form.resx">
       <DependentUpon>UC_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Profile.resx">
+    <EmbeddedResource Include="UI\UC_Profile.resx">
       <DependentUpon>UC_Profile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Reader.resx">
+    <EmbeddedResource Include="UI\UC_Reader.resx">
       <DependentUpon>UC_Reader.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UC_Stat.resx">
+    <EmbeddedResource Include="UI\UC_Stat.resx">
       <DependentUpon>UC_Stat.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -289,6 +292,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\info_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DTO\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
