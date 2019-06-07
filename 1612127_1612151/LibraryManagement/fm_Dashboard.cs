@@ -60,22 +60,30 @@ namespace LibraryManagement
 
         private void btnQLDocGia_Click(object sender, EventArgs e)
         {
-
+            control_area.Controls.Clear();
+            control_area.Controls.Add(new UC_Reader());
+            toggler(sender);
         }
 
         private void btnQLPhieu_Click(object sender, EventArgs e)
         {
-
+            control_area.Controls.Clear();
+            control_area.Controls.Add(new UC_Form());
+            toggler(sender);
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-
+            control_area.Controls.Clear();
+            control_area.Controls.Add(new UC_Stat());
+            toggler(sender);
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-
+            control_area.Controls.Clear();
+            control_area.Controls.Add(new UC_Admin());
+            toggler(sender);
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
