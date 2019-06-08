@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -28,6 +29,26 @@ namespace LibraryManagement.DAO
         public DataTable LoadDataREADER()
         {
             return library.LoadDataREADER();
+        }
+
+        public int InsertBook_type(Book_type bt)
+        {
+            return library.InsertBook_type(bt);
+        }
+
+        public int EditBook_type(Book_type bt)
+        {
+            return library.EditBook_type(bt);
+        }
+
+        public int DeleteBook_type(int id)
+        {
+            return library.DeleteBook_type(id);
+        }
+
+        public DataTable SearchBook_type(string query)
+        {
+            return library.SearchBook_type(query);
         }
     }
 }

@@ -84,6 +84,7 @@
     <Compile Include="BUS\LibraryBUS.cs" />
     <Compile Include="DAO\LibraryDAO.cs" />
     <Compile Include="DAO\ProcessData.cs" />
+    <Compile Include="DTO\Book_type.cs" />
     <Compile Include="UI\fm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,8 +294,6 @@
   <ItemGroup>
     <None Include="Resources\info_480px.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

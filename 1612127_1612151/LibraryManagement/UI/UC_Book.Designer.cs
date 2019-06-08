@@ -65,15 +65,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuMaterialTextbox1 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnDelete = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnEdit = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.edtSearch = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnClose = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton3 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton4 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAdd = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnViewAll = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnSearch = new Bunifu.Framework.UI.BunifuImageButton();
             this.tabPublish = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -87,7 +87,7 @@
             this.edtNXB = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuImageButton10 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.Combobox2 = new Bunifu.Framework.UI.BunifuDropdown();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.bunifuImageButton11 = new Bunifu.Framework.UI.BunifuImageButton();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -111,13 +111,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataTypeOfBook)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnViewAll)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.tabPublish.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.panel5.SuspendLayout();
@@ -138,7 +138,7 @@
             this.tabBookMana.Controls.Add(this.tabPublish);
             this.tabBookMana.Location = new System.Drawing.Point(0, 0);
             this.tabBookMana.Name = "tabBookMana";
-            this.tabBookMana.SelectedIndex = 0;
+            this.tabBookMana.SelectedIndex = 2;
             this.tabBookMana.Size = new System.Drawing.Size(984, 554);
             this.tabBookMana.TabIndex = 0;
             this.tabBookMana.UseSelectable = true;
@@ -163,6 +163,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(3, 202);
@@ -506,7 +507,6 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
-           
             // 
             // bunifuMaterialTextbox3
             // 
@@ -588,6 +588,7 @@
             // 
             // dataTypeOfBook
             // 
+            this.dataTypeOfBook.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataTypeOfBook.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataTypeOfBook.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataTypeOfBook.Location = new System.Drawing.Point(3, 190);
@@ -653,32 +654,33 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.bunifuImageButton2);
+            this.panel2.Controls.Add(this.btnDelete);
             this.panel2.Controls.Add(this.bunifuDropdown1);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.bunifuImageButton1);
+            this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.edtSearch);
-            this.panel2.Controls.Add(this.btnClose);
-            this.panel2.Controls.Add(this.bunifuImageButton3);
-            this.panel2.Controls.Add(this.bunifuImageButton4);
+            this.panel2.Controls.Add(this.btnAdd);
+            this.panel2.Controls.Add(this.btnViewAll);
+            this.panel2.Controls.Add(this.btnSearch);
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(970, 61);
             this.panel2.TabIndex = 25;
             // 
-            // bunifuImageButton2
+            // btnDelete
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Image = global::LibraryManagement.Properties.Resources.delete_96px;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(916, 15);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(35, 34);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 19;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 10;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.Image = global::LibraryManagement.Properties.Resources.delete_96px;
+            this.btnDelete.ImageActive = null;
+            this.btnDelete.Location = new System.Drawing.Point(916, 15);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(35, 34);
+            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Zoom = 10;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // bunifuDropdown1
             // 
@@ -704,18 +706,19 @@
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
             // 
-            // bunifuImageButton1
+            // btnEdit
             // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Image = global::LibraryManagement.Properties.Resources.edit_80px;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(864, 15);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(35, 34);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 18;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
+            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
+            this.btnEdit.Image = global::LibraryManagement.Properties.Resources.edit_80px;
+            this.btnEdit.ImageActive = null;
+            this.btnEdit.Location = new System.Drawing.Point(864, 15);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(35, 34);
+            this.btnEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnEdit.TabIndex = 18;
+            this.btnEdit.TabStop = false;
+            this.btnEdit.Zoom = 10;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // pictureBox1
             // 
@@ -747,44 +750,47 @@
             this.edtSearch.TabIndex = 23;
             this.edtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnClose
+            // btnAdd
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Image = global::LibraryManagement.Properties.Resources.add_96px;
-            this.btnClose.ImageActive = null;
-            this.btnClose.Location = new System.Drawing.Point(813, 15);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(35, 34);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnClose.TabIndex = 17;
-            this.btnClose.TabStop = false;
-            this.btnClose.Zoom = 10;
+            this.btnAdd.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdd.Image = global::LibraryManagement.Properties.Resources.add_96px;
+            this.btnAdd.ImageActive = null;
+            this.btnAdd.Location = new System.Drawing.Point(813, 15);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(35, 34);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAdd.TabIndex = 17;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Zoom = 10;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // bunifuImageButton3
+            // btnViewAll
             // 
-            this.bunifuImageButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton3.Image = global::LibraryManagement.Properties.Resources.view_file_96px;
-            this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(763, 15);
-            this.bunifuImageButton3.Name = "bunifuImageButton3";
-            this.bunifuImageButton3.Size = new System.Drawing.Size(35, 34);
-            this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton3.TabIndex = 20;
-            this.bunifuImageButton3.TabStop = false;
-            this.bunifuImageButton3.Zoom = 10;
+            this.btnViewAll.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewAll.Image = global::LibraryManagement.Properties.Resources.view_file_96px;
+            this.btnViewAll.ImageActive = null;
+            this.btnViewAll.Location = new System.Drawing.Point(763, 15);
+            this.btnViewAll.Name = "btnViewAll";
+            this.btnViewAll.Size = new System.Drawing.Size(35, 34);
+            this.btnViewAll.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnViewAll.TabIndex = 20;
+            this.btnViewAll.TabStop = false;
+            this.btnViewAll.Zoom = 10;
+            this.btnViewAll.Click += new System.EventHandler(this.btnViewAll_Click);
             // 
-            // bunifuImageButton4
+            // btnSearch
             // 
-            this.bunifuImageButton4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton4.Image = global::LibraryManagement.Properties.Resources.search_96px;
-            this.bunifuImageButton4.ImageActive = null;
-            this.bunifuImageButton4.Location = new System.Drawing.Point(713, 15);
-            this.bunifuImageButton4.Name = "bunifuImageButton4";
-            this.bunifuImageButton4.Size = new System.Drawing.Size(35, 34);
-            this.bunifuImageButton4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton4.TabIndex = 21;
-            this.bunifuImageButton4.TabStop = false;
-            this.bunifuImageButton4.Zoom = 10;
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.Image = global::LibraryManagement.Properties.Resources.search_96px;
+            this.btnSearch.ImageActive = null;
+            this.btnSearch.Location = new System.Drawing.Point(713, 15);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(35, 34);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 21;
+            this.btnSearch.TabStop = false;
+            this.btnSearch.Zoom = 10;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tabPublish
             // 
@@ -806,6 +812,7 @@
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(3, 199);
@@ -961,7 +968,7 @@
             // panel6
             // 
             this.panel6.Controls.Add(this.bunifuImageButton10);
-            this.panel6.Controls.Add(this.bunifuDropdown3);
+            this.panel6.Controls.Add(this.Combobox2);
             this.panel6.Controls.Add(this.pictureBox6);
             this.panel6.Controls.Add(this.bunifuImageButton11);
             this.panel6.Controls.Add(this.pictureBox5);
@@ -987,19 +994,19 @@
             this.bunifuImageButton10.TabStop = false;
             this.bunifuImageButton10.Zoom = 10;
             // 
-            // bunifuDropdown3
+            // Combobox2
             // 
-            this.bunifuDropdown3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown3.BorderRadius = 3;
-            this.bunifuDropdown3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown3.Items = new string[0];
-            this.bunifuDropdown3.Location = new System.Drawing.Point(521, 12);
-            this.bunifuDropdown3.Name = "bunifuDropdown3";
-            this.bunifuDropdown3.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown3.onHoverColor = System.Drawing.SystemColors.ControlDark;
-            this.bunifuDropdown3.selectedIndex = -1;
-            this.bunifuDropdown3.Size = new System.Drawing.Size(178, 35);
-            this.bunifuDropdown3.TabIndex = 26;
+            this.Combobox2.BackColor = System.Drawing.Color.Transparent;
+            this.Combobox2.BorderRadius = 3;
+            this.Combobox2.ForeColor = System.Drawing.Color.Black;
+            this.Combobox2.Items = new string[0];
+            this.Combobox2.Location = new System.Drawing.Point(521, 12);
+            this.Combobox2.Name = "Combobox2";
+            this.Combobox2.NomalColor = System.Drawing.Color.White;
+            this.Combobox2.onHoverColor = System.Drawing.SystemColors.ControlDark;
+            this.Combobox2.selectedIndex = -1;
+            this.Combobox2.Size = new System.Drawing.Size(178, 35);
+            this.Combobox2.TabIndex = 26;
             // 
             // pictureBox6
             // 
@@ -1118,13 +1125,13 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnViewAll)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             this.tabPublish.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.panel5.ResumeLayout(false);
@@ -1149,11 +1156,11 @@
         private MetroFramework.Controls.MetroTabPage tabPublish;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox1;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
-        private Bunifu.Framework.UI.BunifuImageButton btnClose;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton4;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton3;
+        private Bunifu.Framework.UI.BunifuImageButton btnDelete;
+        private Bunifu.Framework.UI.BunifuImageButton btnEdit;
+        private Bunifu.Framework.UI.BunifuImageButton btnAdd;
+        private Bunifu.Framework.UI.BunifuImageButton btnSearch;
+        private Bunifu.Framework.UI.BunifuImageButton btnViewAll;
         private System.Windows.Forms.DataGridView dataTypeOfBook;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuDropdown dropFilter;
@@ -1188,7 +1195,7 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox edtNXB;
         private System.Windows.Forms.Panel panel6;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton10;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown3;
+        private Bunifu.Framework.UI.BunifuDropdown Combobox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton11;
         private System.Windows.Forms.PictureBox pictureBox5;
