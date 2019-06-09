@@ -84,7 +84,10 @@
     <Compile Include="BUS\LibraryBUS.cs" />
     <Compile Include="DAO\LibraryDAO.cs" />
     <Compile Include="DAO\ProcessData.cs" />
+    <Compile Include="DTO\Book.cs" />
     <Compile Include="DTO\Book_type.cs" />
+    <Compile Include="DTO\Publishing_house.cs" />
+    <Compile Include="DTO\Reader.cs" />
     <Compile Include="UI\fm_DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
