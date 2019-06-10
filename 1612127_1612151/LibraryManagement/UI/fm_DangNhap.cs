@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Security.Cryptography;
 namespace LibraryManagement
 {
     public partial class Login : Form
     {
+        LibraryBUS library = new LibraryBUS();
         public Login()
         {
             InitializeComponent();
@@ -39,9 +41,39 @@ namespace LibraryManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            fm_Dashboard dashboard = new fm_Dashboard();
-            dashboard.Show();
+           // fm_Dashboard dashboard = new fm_Dashboard();
+           // dashboard.Show();
             ///this.Close();
+              string username = edtUsername.Text;
+              string password = "";
+              byte[] buffer = Encoding.UTF8.GetBytes(edtPassword.Text);
+              MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+              buffer = md5.ComputeHash(buffer);
+              for (int i = 0; i < buffer.Length; i++)
+              {
+                  password += buffer[i].ToString("x2");
+              }
+
+              DataTable dt = library.FindAccount(username, password);
+              if (dt != null)
+              {
+                  if (dt.Rows.Count > 0)
+                  {
+                      List<int> list = dt.AsEnumerable().Select(r => r.Field<int>("ROLE")).ToList();
+                      int mabt = list[0];
+                     
+                      fm_Dashboard cs = new fm_Dashboard();
+                    
+                      cs.ShowDialog();
+               
+                     
+                  }
+                  else MessageBox.Show("Tài khoản hoặc mật không chính xác");
+              }
+            
         }
+
+       
+        
     }
 }

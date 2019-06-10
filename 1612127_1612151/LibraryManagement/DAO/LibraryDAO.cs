@@ -171,5 +171,18 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
-    }
+
+        public DataTable FindAccount(string username,string password)
+        {
+            string sql = string.Format("Select Role FROM ACCOUNT where USERNAME='{0}' and PASS='{1}'", username, password);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public DataTable LoadDataEmployee(string username)
+        {
+            string sql = string.Format("Select * FROM EMPLOYEE Where USERNAME = '{0}'",username);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+      }
 }

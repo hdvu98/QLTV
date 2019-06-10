@@ -12,6 +12,7 @@ namespace LibraryManagement
 {
     public partial class fm_Dashboard : Form
     {
+       
         public fm_Dashboard()
         {
             InitializeComponent();
@@ -36,8 +37,10 @@ namespace LibraryManagement
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Profile());
+            UC_Profile pf = new UC_Profile();
+            control_area.Controls.Add(pf);
             toggler(sender);
+            pf.LoadDataEmployee();
         }
         void toggler(Object sender)
         {
@@ -88,9 +91,11 @@ namespace LibraryManagement
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
+   
             control_area.Controls.Clear();
             control_area.Controls.Add(new UC_Admin());
             toggler(sender);
+           
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)

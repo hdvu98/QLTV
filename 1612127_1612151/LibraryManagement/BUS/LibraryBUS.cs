@@ -122,5 +122,15 @@ namespace LibraryManagement.DAO
         {
             return library.SearchBook(column, query);
         }
+
+        public DataTable FindAccount(string username,string password)
+        {
+            return library.FindAccount(username, password);
+        }
+
+        public DataTable LoadDataEmployee(string username)
+        {
+            return library.LoadDataEmployee(username);
+        }
     }   
 }
