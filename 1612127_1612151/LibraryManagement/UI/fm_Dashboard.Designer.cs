@@ -107,11 +107,11 @@
             // txtUser
             // 
             this.txtUser.AutoSize = true;
-            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUser.ForeColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(45, 100);
+            this.txtUser.Location = new System.Drawing.Point(32, 100);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(83, 20);
+            this.txtUser.Size = new System.Drawing.Size(71, 16);
             this.txtUser.TabIndex = 3;
             this.txtUser.Text = "Username";
             // 
@@ -236,7 +236,7 @@
             this.btnAdmin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btnAdmin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdmin.BorderRadius = 0;
-            this.btnAdmin.ButtonText = "Quản trị Admin";
+            this.btnAdmin.ButtonText = "Quản lý nhân viên";
             this.btnAdmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdmin.DisabledColor = System.Drawing.Color.Gray;
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -261,7 +261,7 @@
             this.btnAdmin.selected = false;
             this.btnAdmin.Size = new System.Drawing.Size(180, 40);
             this.btnAdmin.TabIndex = 11;
-            this.btnAdmin.Text = "Quản trị Admin";
+            this.btnAdmin.Text = "Quản lý nhân viên";
             this.btnAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdmin.Textcolor = System.Drawing.Color.White;
             this.btnAdmin.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

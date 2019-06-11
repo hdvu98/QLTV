@@ -12,13 +12,44 @@ namespace LibraryManagement
 {
     public partial class fm_Dashboard : Form
     {
-       
+        public delegate string GetUserName();
+        public GetUserName OnGetUserName;
+
+        public delegate string GetPassWord();
+        public GetPassWord OnGetPassWord;
+
+        public delegate int GetRole();
+        public GetRole OnGetRole;
+
+        public delegate string NameAccount();
+        public NameAccount GetNameAccount;
         public fm_Dashboard()
         {
             InitializeComponent();
             Bunifu.Framework.Lib.Elipse.Apply(this, 15);
+           
+        }
+        public string CallPassWord()
+        {
+            return OnGetPassWord();
         }
 
+        public string Call()
+        {
+           return OnGetUserName();
+        }
+        public void SetChucVuAndName()
+        {
+            if (OnGetRole() == 1) { txtChucVu.Text = "Admin"; }
+            if (OnGetRole() == 0) { 
+                txtChucVu.Text = "Nhân viên"; 
+                btnAdmin.Visible = false;
+                btnDangXuat.Location  = new Point(0,347);
+               
+            }
+            txtUser.Text = GetNameAccount();
+        }
+    
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
@@ -38,9 +69,12 @@ namespace LibraryManagement
         {
             control_area.Controls.Clear();
             UC_Profile pf = new UC_Profile();
+            pf.OnUSName += delegate { return Call(); };
+            pf.OnPassWord += delegate { return CallPassWord(); };
             control_area.Controls.Add(pf);
             toggler(sender);
             pf.LoadDataEmployee();
+
         }
         void toggler(Object sender)
         {
@@ -93,8 +127,11 @@ namespace LibraryManagement
         {
    
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Admin());
+            UC_Admin uc_admin = new UC_Admin();
+            uc_admin.OnUSName += delegate { return Call(); };
+            control_area.Controls.Add(uc_admin);
             toggler(sender);
+            uc_admin.LoadDataNhanVien();
            
         }
 

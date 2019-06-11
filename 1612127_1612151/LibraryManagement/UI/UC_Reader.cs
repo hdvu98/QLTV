@@ -35,11 +35,11 @@ namespace LibraryManagement
             string gender = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             edtPhone.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             edtEmail.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            if(gender=="Nam"||gender=="nam")
+            if(gender.ToLower()=="nam")
             {
                 nam.Checked = true;
             }
-            else if(gender=="nữ" || gender =="Nữ")
+            else if(gender.ToLower()=="nữ")
             {
                 nu.Checked = true;
             }

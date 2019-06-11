@@ -184,5 +184,39 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
+
+        public int EditEmployee(Employee ep)
+        {
+            string sql = string.Format("Update EMPLOYEE SET NAME=N'{2}',EMPLOYEE_ADDRESS=N'{3}',EMAIL='{4}',PHONE_NUMBER='{5}',DATE_OF_BIRTH='{6}',GENDER=N'{7}' WHERE USERNAME ='{1}'", ep.Employee_ID,ep.UserName, ep.Name, ep.Employee_Addres, ep.Email, ep.Phone_number, ep.Date_of_birth, ep.Gender);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+
+        public DataTable LoadDataAccount(string us)
+        {
+            string sql = string.Format("Select PASS from ACCOUNT WHERE USERNAME ='{0}'",us);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public int EditPasswordAccount(string us, string pw)
+        {
+            string sql = string.Format("Update ACCOUNT SET PASS ='{1}' WHERE USERNAME ='{0}'", us, pw);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+
+        public DataTable LoadDataNhanVien(string username)
+        {
+            string sql = string.Format("Select * from EMPLOYEE WHERE USERNAME !='{0}'", username);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public DataTable FindNameAccount(string username)
+        {
+            string sql = string.Format("Select NAME FROM EMPLOYEE WHERE USERNAME ='{0}'", username);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
       }
 }

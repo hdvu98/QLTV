@@ -14,6 +14,7 @@ namespace LibraryManagement
     public partial class Login : Form
     {
         LibraryBUS library = new LibraryBUS();
+
         public Login()
         {
             InitializeComponent();
@@ -41,10 +42,15 @@ namespace LibraryManagement
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           // fm_Dashboard dashboard = new fm_Dashboard();
-           // dashboard.Show();
-            ///this.Close();
               string username = edtUsername.Text;
+              for(int i = 0;i<username.Length;i++)
+              {
+                  if (username[i] <= 'Z' && username[i] >= 'A')
+                  {
+                      MessageBox.Show("Tài khoản hoặc mật khẩu không đúng");
+                      return;
+                  }
+              }
               string password = "";
               byte[] buffer = Encoding.UTF8.GetBytes(edtPassword.Text);
               MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
@@ -55,6 +61,7 @@ namespace LibraryManagement
               }
 
               DataTable dt = library.FindAccount(username, password);
+              DataTable dt2 = library.FindNameAccount(username);
               if (dt != null)
               {
                   if (dt.Rows.Count > 0)
@@ -63,17 +70,18 @@ namespace LibraryManagement
                       int mabt = list[0];
                      
                       fm_Dashboard cs = new fm_Dashboard();
-                    
+                      cs.OnGetUserName += delegate { return edtUsername.Text; };
+                      cs.OnGetPassWord += delegate { return edtPassword.Text; };
+                      cs.OnGetRole += delegate { return mabt; };
+                      cs.GetNameAccount += delegate { return dt2.Rows[0][0].ToString(); };
+                      cs.SetChucVuAndName();
+                   
                       cs.ShowDialog();
-               
-                     
+
                   }
-                  else MessageBox.Show("Tài khoản hoặc mật không chính xác");
+                  else MessageBox.Show("Tài khoản hoặc mật khẩu không chính xác");
               }
             
         }
-
-       
-        
     }
 }

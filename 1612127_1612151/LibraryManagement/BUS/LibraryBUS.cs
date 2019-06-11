@@ -132,5 +132,29 @@ namespace LibraryManagement.DAO
         {
             return library.LoadDataEmployee(username);
         }
+        
+        public int EditEmployee(Employee ep)
+        {
+            return library.EditEmployee(ep);
+        }
+
+        public DataTable LoadDataAccount(string us)
+        {
+            return library.LoadDataAccount(us);
+        }
+        public int EditPasswordAccount(string us, string pw) 
+        {
+            return library.EditPasswordAccount(us, pw);
+        }
+
+        public DataTable LoadDataNhanVien(string username)
+        {
+            return library.LoadDataNhanVien(username);
+        }
+
+        public DataTable FindNameAccount(string username)
+        {
+            return library.FindNameAccount(username);
+        }
     }   
 }
