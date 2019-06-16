@@ -1,0 +1,113 @@
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.pdb
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\Bunifu_UI_v1.52.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Data.v19.1.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Printing.v19.1.Core.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Utils.v19.1.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Design.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Fonts.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Pdf.v19.1.Core.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Data.v19.1.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Printing.v19.1.Core.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Utils.v19.1.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.pdb
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.pdb
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.pdb
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\DevExpress.Pdf.v19.1.Core.xml
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\de\DevExpress.Data.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\es\DevExpress.Data.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ja\DevExpress.Data.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ru\DevExpress.Data.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\de\DevExpress.Printing.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\es\DevExpress.Printing.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ja\DevExpress.Printing.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ru\DevExpress.Printing.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\de\DevExpress.Utils.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\es\DevExpress.Utils.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ja\DevExpress.Utils.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ru\DevExpress.Utils.v19.1.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\de\DevExpress.Pdf.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\es\DevExpress.Pdf.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ja\DevExpress.Pdf.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\bin\Debug\ru\DevExpress.Pdf.v19.1.Core.resources.dll
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Login.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Admin.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Book.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Form.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Profile.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Reader.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Stat.resources
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.exe
+E:\HocTap\2018-2019\TKPM\project\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Design.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.xml
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Login.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Admin.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Book.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Form.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Profile.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Reader.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Stat.resources
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.Cache
+C:\Users\Giang\Documents\GitHub\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.pdb
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Design.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Fonts.dll
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.pdb
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.xml
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.pdb
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.xml
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.pdb
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.xml
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojAssemblyReference.cache
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Login.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Admin.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Book.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Form.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Profile.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Reader.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Stat.resources
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.cache
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.CoreCompileInputs.cache
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.exe
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.pdb
+E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
