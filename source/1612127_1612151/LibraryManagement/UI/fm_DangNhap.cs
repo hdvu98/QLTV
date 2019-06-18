@@ -19,7 +19,7 @@ namespace LibraryManagement
         {
             InitializeComponent();
             Bunifu.Framework.Lib.Elipse.Apply(this, 15);
-            autoLogin();
+            //autoLogin();
            
         }
 

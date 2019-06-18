@@ -41,6 +41,10 @@ namespace LibraryManagement.DAO
             return library.EditBook_type(bt);
         }
 
+        public DataTable CheckBook_typeValid(string query)
+        {
+            return library.CheckBook_typeValid(query);
+        }
         public int DeleteBook_type(int id)
         {
             return library.DeleteBook_type(id);
@@ -55,20 +59,24 @@ namespace LibraryManagement.DAO
         {
             return library.InsertPublish_House(ph);
         }
-        
+
         public int EditPublish_House(Publishing_house ph)
         {
             return library.EditPublish_House(ph);
         }
 
+        public DataTable CheckPublish_house(string query)
+        {
+            return library.CheckPublish_house(query);
+        }
         public int DeletePublish_House(string id)
         {
             return library.DeletePublish_House(id);
         }
 
-        public DataTable SearchPublish_House(string column,string query)
+        public DataTable SearchPublish_House(string column, string query)
         {
-            return library.SearchPublish_House(column,query);
+            return library.SearchPublish_House(column, query);
         }
         public DataTable GetDataNamePH()
         {
@@ -91,7 +99,7 @@ namespace LibraryManagement.DAO
             return library.DeleteReader(id);
         }
 
-        public DataTable SearchReader(string column,string query)
+        public DataTable SearchReader(string column, string query)
         {
             return library.SearchReader(column, query);
         }
@@ -108,7 +116,7 @@ namespace LibraryManagement.DAO
             return library.InsertBook(b, ph, bt);
 
         }
-        public int EditBook(Book b,string ph,int bt)
+        public int EditBook(Book b, string ph, int bt)
         {
             return library.EditBook(b, ph, bt);
         }
@@ -123,7 +131,7 @@ namespace LibraryManagement.DAO
             return library.SearchBook(column, query);
         }
 
-        public DataTable FindAccount(string username,string password)
+        public DataTable FindAccount(string username, string password)
         {
             return library.FindAccount(username, password);
         }
@@ -132,7 +140,7 @@ namespace LibraryManagement.DAO
         {
             return library.LoadDataEmployee(username);
         }
-        
+
         public int EditEmployee(Employee ep)
         {
             return library.EditEmployee(ep);
@@ -142,7 +150,7 @@ namespace LibraryManagement.DAO
         {
             return library.LoadDataAccount(us);
         }
-        public int EditPasswordAccount(string us, string pw) 
+        public int EditPasswordAccount(string us, string pw)
         {
             return library.EditPasswordAccount(us, pw);
         }
@@ -156,5 +164,5 @@ namespace LibraryManagement.DAO
         {
             return library.FindNameAccount(username);
         }
-    }   
+    }
 }

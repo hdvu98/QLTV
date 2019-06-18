@@ -32,8 +32,6 @@
             this.tabBook = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbTheLoai = new System.Windows.Forms.ComboBox();
-            this.cbNXB = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.edtTomTat = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label10 = new System.Windows.Forms.Label();
@@ -95,6 +93,8 @@
             this.bunifuImageButton12 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton13 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuImageButton14 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.dropdownNXB = new Bunifu.Framework.UI.BunifuDropdown();
+            this.dropdownTheLoai = new Bunifu.Framework.UI.BunifuDropdown();
             this.tabBookMana.SuspendLayout();
             this.tabBook.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -174,8 +174,8 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            this.panel3.Controls.Add(this.cbTheLoai);
-            this.panel3.Controls.Add(this.cbNXB);
+            this.panel3.Controls.Add(this.dropdownTheLoai);
+            this.panel3.Controls.Add(this.dropdownNXB);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.edtTomTat);
             this.panel3.Controls.Add(this.label10);
@@ -195,29 +195,13 @@
             this.panel3.Size = new System.Drawing.Size(970, 126);
             this.panel3.TabIndex = 27;
             // 
-            // cbTheLoai
-            // 
-            this.cbTheLoai.FormattingEnabled = true;
-            this.cbTheLoai.Location = new System.Drawing.Point(483, 26);
-            this.cbTheLoai.Name = "cbTheLoai";
-            this.cbTheLoai.Size = new System.Drawing.Size(180, 24);
-            this.cbTheLoai.TabIndex = 39;
-            // 
-            // cbNXB
-            // 
-            this.cbNXB.FormattingEnabled = true;
-            this.cbNXB.Location = new System.Drawing.Point(249, 26);
-            this.cbNXB.Name = "cbNXB";
-            this.cbNXB.Size = new System.Drawing.Size(180, 24);
-            this.cbNXB.TabIndex = 29;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(710, 59);
+            this.label11.Location = new System.Drawing.Point(710, 61);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(60, 16);
             this.label11.TabIndex = 37;
@@ -236,7 +220,7 @@
             this.edtTomTat.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.edtTomTat.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.edtTomTat.LineThickness = 3;
-            this.edtTomTat.Location = new System.Drawing.Point(713, 79);
+            this.edtTomTat.Location = new System.Drawing.Point(713, 81);
             this.edtTomTat.Margin = new System.Windows.Forms.Padding(4);
             this.edtTomTat.Name = "edtTomTat";
             this.edtTomTat.Size = new System.Drawing.Size(180, 36);
@@ -282,7 +266,7 @@
             this.btnNgayXB.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNgayXB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.btnNgayXB.FormatCustom = null;
-            this.btnNgayXB.Location = new System.Drawing.Point(483, 79);
+            this.btnNgayXB.Location = new System.Drawing.Point(483, 81);
             this.btnNgayXB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnNgayXB.Name = "btnNgayXB";
             this.btnNgayXB.Size = new System.Drawing.Size(180, 34);
@@ -326,7 +310,7 @@
             this.edtGiaSach.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.edtGiaSach.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.edtGiaSach.LineThickness = 3;
-            this.edtGiaSach.Location = new System.Drawing.Point(249, 81);
+            this.edtGiaSach.Location = new System.Drawing.Point(249, 82);
             this.edtGiaSach.Margin = new System.Windows.Forms.Padding(4);
             this.edtGiaSach.Name = "edtGiaSach";
             this.edtGiaSach.Size = new System.Drawing.Size(180, 35);
@@ -1099,6 +1083,37 @@
             this.bunifuImageButton14.Zoom = 10;
             this.bunifuImageButton14.Click += new System.EventHandler(this.bunifuImageButton14_Click);
             // 
+            // dropdownNXB
+            // 
+            this.dropdownNXB.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.dropdownNXB.BackColor = System.Drawing.Color.Transparent;
+            this.dropdownNXB.BorderRadius = 3;
+            this.dropdownNXB.ForeColor = System.Drawing.Color.Black;
+            this.dropdownNXB.Items = new string[0];
+            this.dropdownNXB.Location = new System.Drawing.Point(249, 26);
+            this.dropdownNXB.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dropdownNXB.Name = "dropdownNXB";
+            this.dropdownNXB.NomalColor = System.Drawing.Color.White;
+            this.dropdownNXB.onHoverColor = System.Drawing.SystemColors.ControlDark;
+            this.dropdownNXB.selectedIndex = -1;
+            this.dropdownNXB.Size = new System.Drawing.Size(180, 35);
+            this.dropdownNXB.TabIndex = 40;
+            // 
+            // dropdownTheLoai
+            // 
+            this.dropdownTheLoai.BackColor = System.Drawing.Color.Transparent;
+            this.dropdownTheLoai.BorderRadius = 3;
+            this.dropdownTheLoai.ForeColor = System.Drawing.Color.Black;
+            this.dropdownTheLoai.Items = new string[0];
+            this.dropdownTheLoai.Location = new System.Drawing.Point(483, 26);
+            this.dropdownTheLoai.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dropdownTheLoai.Name = "dropdownTheLoai";
+            this.dropdownTheLoai.NomalColor = System.Drawing.Color.White;
+            this.dropdownTheLoai.onHoverColor = System.Drawing.SystemColors.ControlDark;
+            this.dropdownTheLoai.selectedIndex = -1;
+            this.dropdownTheLoai.Size = new System.Drawing.Size(180, 33);
+            this.dropdownTheLoai.TabIndex = 41;
+            // 
             // UC_Book
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1214,7 +1229,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox edtTacGia;
-        private System.Windows.Forms.ComboBox cbTheLoai;
-        private System.Windows.Forms.ComboBox cbNXB;
+        private Bunifu.Framework.UI.BunifuDropdown dropdownTheLoai;
+        private Bunifu.Framework.UI.BunifuDropdown dropdownNXB;
     }
 }

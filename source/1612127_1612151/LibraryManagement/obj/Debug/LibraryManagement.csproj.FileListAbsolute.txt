@@ -111,3 +111,31 @@ E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\De
 E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.exe
 E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.pdb
 E:\gitHub\project TKPM\Quan-Ly-Thu-Vien\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Design.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.pdb
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.xml
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Login.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Admin.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Book.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Form.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Profile.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Reader.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Stat.resources
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.Cache

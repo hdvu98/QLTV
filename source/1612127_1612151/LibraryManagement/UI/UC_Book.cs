@@ -17,34 +17,37 @@ namespace LibraryManagement
     {
 
         LibraryBUS library = new LibraryBUS();
-         public int id = 0;
-         string ph_id = "";
+        public int id = 0;
+        string ph_id = "";
         public UC_Book()
         {
             InitializeComponent();
             this.dataTypeOfBook.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataTypeOfBook_CellClick);
             bunifuDropdown1.AddItem("Tên thể loại");
             this.dataGridView2.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellClick);
-            string [] items = {"Mã ID","Tên","Địa chỉ","Số ĐT","Email"};
-            foreach(var item in items)
+            string[] items = { "Mã ID", "Tên", "Địa chỉ", "Số ĐT", "Email" };
+            foreach (var item in items)
             {
                 Combobox2.AddItem(item);
-            } 
+            }
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             DataTable dt = library.GetDataNamePH();
-            cbNXB.DataSource = dt;
-            cbNXB.ValueMember = "NAME";
-            cbNXB.DisplayMember = "NAME";
+            List<string> list = dt.AsEnumerable().Select(r => r.Field<string>("NAME")).ToList();
+            foreach (var it in list)
+            {
+                dropdownNXB.AddItem(it);
+            }
             DataTable dt2 = library.GetDataBookTypeName();
-            
-            cbTheLoai.DataSource = dt2;
-            cbTheLoai.DisplayMember = "BTYPE";
-            cbTheLoai.ValueMember = "BTYPE";
+            List<string> list2 = dt2.AsEnumerable().Select(r => r.Field<string>("BTYPE")).ToList();
+            foreach (var it in list2)
+            {
+                dropdownTheLoai.AddItem(it);
+            }
             string[] dulieus = { "Mã ID", "Tên sách", "Tác giả", "Nhà sản xuất", "Tóm tắt" };
             foreach (var item in dulieus)
             {
                 bunifuDropdown2.AddItem(item);
-            } 
+            }
         }
         public void LoadDataBOOK()
         {
@@ -61,21 +64,21 @@ namespace LibraryManagement
             var table = library.LoadDataPUBLISHING_HOUSE();
             dataGridView2.DataSource = table;
         }
-      
-      
+
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Book_type bt = new Book_type();
             bt.BType = bunifuMaterialTextbox1.Text;
             library.InsertBook_type(bt);
-            LoadDataBOOK_TYPE();  
+            LoadDataBOOK_TYPE();
         }
         private void dataTypeOfBook_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
             string btype = dataTypeOfBook.CurrentRow.Cells[1].Value.ToString();
             bunifuMaterialTextbox1.Text = btype;
-           
+
         }
         private void btnEdit_Click(object sender, EventArgs e)
         {
@@ -92,16 +95,26 @@ namespace LibraryManagement
             if (MessageBox.Show("Bạn có thực sự muốn xóa hay không?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
             int id = int.Parse(dataTypeOfBook.CurrentRow.Cells[0].Value.ToString());
-            library.DeleteBook_type(id);
-            LoadDataBOOK_TYPE();
+            string name = dataTypeOfBook.CurrentRow.Cells[1].Value.ToString();
+            DataTable check = library.CheckBook_typeValid(name);
+            if (check != null)
+            {
+                if (check.Rows.Count > 0) { MessageBox.Show("Dữ liêu liên quan đến dữ liệu khác. Không xóa được!"); }
+                else
+                {
+                    library.DeleteBook_type(id);
+                    LoadDataBOOK_TYPE();
+                }
+            }
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             string query = edtSearch.Text;
-            DataTable data = new DataTable();
-            data = library.SearchBook_type(query);
-            dataTypeOfBook.DataSource = data;
+            DataTable dt = library.SearchBook_type(query);
+            dataTypeOfBook.DataSource = dt;
+
         }
 
         private void btnViewAll_Click(object sender, EventArgs e)
@@ -119,7 +132,7 @@ namespace LibraryManagement
             ph.Phone_number = edtPhoneNum.Text;
             ph.Email = edtEmail.Text;
             library.InsertPublish_House(ph);
-            LoadDataPUBLISHING_HOUSE();  
+            LoadDataPUBLISHING_HOUSE();
         }
 
         private void dataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -133,7 +146,6 @@ namespace LibraryManagement
             edtPhoneNum.Text = Phone;
             edtAdress.Text = Address;
             edtEmail.Text = Email;
-           
 
         }
         private void bunifuImageButton11_Click(object sender, EventArgs e)
@@ -154,8 +166,17 @@ namespace LibraryManagement
             if (MessageBox.Show("Bạn có thực sự muốn xóa hay không?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.No)
                 return;
             string ph_id = dataGridView2.CurrentRow.Cells[0].Value.ToString();
-            library.DeletePublish_House(ph_id);
-            LoadDataPUBLISHING_HOUSE();
+            string name = dataGridView2.CurrentRow.Cells[1].Value.ToString();
+            DataTable check = library.CheckPublish_house(name);
+            if (check != null)
+            {
+                if (check.Rows.Count > 0) { MessageBox.Show("Dữ liêu có liên quan đến dữ liệu khác. Không xóa được!"); }
+                else
+                {
+                    library.DeletePublish_House(ph_id);
+                    LoadDataPUBLISHING_HOUSE();
+                }
+            }
         }
 
         private void bunifuImageButton13_Click(object sender, EventArgs e)
@@ -169,22 +190,27 @@ namespace LibraryManagement
         {
             string column = "NAME";
             string text = this.Combobox2.selectedValue;
-            if (text == "Địa chỉ") {
+            if (text == "Địa chỉ")
+            {
                 column = "PH_ADDRESS";
             }
-            if (text == "Mã ID") { 
+            if (text == "Mã ID")
+            {
                 column = "PH_ID";
             }
-            if (text == "Tên") {
+            if (text == "Tên")
+            {
                 column = "NAME";
             }
-            if (text == "Số ĐT"){
-               column = "PHONE_NUMBER";
+            if (text == "Số ĐT")
+            {
+                column = "PHONE_NUMBER";
             }
-            if (text == "Email") {
-               column = "EMAIL";
+            if (text == "Email")
+            {
+                column = "EMAIL";
             }
-   
+
             string query = Search.Text;
             DataTable data = new DataTable();
             data = library.SearchPublish_House(column, query);
@@ -192,7 +218,7 @@ namespace LibraryManagement
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
             edtTenSach.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             edtTacGia.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             btnNgayXB.Value = DateTime.Parse(dataGridView1.CurrentRow.Cells[8].Value.ToString());
@@ -200,16 +226,35 @@ namespace LibraryManagement
             //string Email = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             edtSoLuong.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             edtTomTat.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            
-            cbNXB.SelectedValue = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            cbTheLoai.SelectedValue = dataGridView1.CurrentRow.Cells[4].Value.ToString();
 
+
+            DataTable dt = library.GetDataNamePH();
+            List<string> list = dt.AsEnumerable().Select(r => r.Field<string>("NAME")).ToList();
+
+            for (int i = 0; i < list.Count(); i++)
+            {
+                if (list[i].ToString() == dataGridView1.CurrentRow.Cells[3].Value.ToString())
+                {
+                    dropdownNXB.selectedIndex = i;
+                }
+            }
+
+            DataTable dt2 = library.GetDataBookTypeName();
+            List<string> list2 = dt2.AsEnumerable().Select(r => r.Field<string>("BTYPE")).ToList();
+
+            for (int i = 0; i < list2.Count(); i++)
+            {
+                if (list2[i].ToString() == dataGridView1.CurrentRow.Cells[4].Value.ToString())
+                {
+                    dropdownTheLoai.selectedIndex = i;
+                }
+            }
 
         }
         private string PH_ID()
         {
 
-            DataTable dt = library.GetIDFromNameNXB(cbNXB.SelectedValue.ToString());
+            DataTable dt = library.GetIDFromNameNXB(dropdownNXB.selectedValue);
             List<string> list = dt.AsEnumerable().Select(r => r.Field<string>("PH_ID")).ToList();
             string maPH = list[0].ToString();
             return maPH;
@@ -217,24 +262,23 @@ namespace LibraryManagement
         private int BT_ID()
         {
 
-            DataTable dt4 = library.GetIDFromNameBookType(cbTheLoai.SelectedValue.ToString());
+            DataTable dt4 = library.GetIDFromNameBookType(dropdownTheLoai.selectedValue);
             List<int> list4 = dt4.AsEnumerable().Select(r => r.Field<int>("BTYPE_ID")).ToList();
             int mabt = list4[0];
             return mabt;
         }
+
         private void addBook_Click(object sender, EventArgs e)
         {
             string a = PH_ID();
             int c = BT_ID();
             Book b = new Book();
             b.Name = edtTenSach.Text;
-            MessageBox.Show(b.Name);
             b.author = edtTacGia.Text;
             b.summary = edtTomTat.Text;
             b.price = float.Parse(edtGiaSach.Text);
             b.amount = edtSoLuong.Text;
             b.publish_year = btnNgayXB.Value.ToString("yyyy/MM/dd");
-
             library.InsertBook(b, a, c);
             LoadDataBOOK();
 
@@ -246,7 +290,7 @@ namespace LibraryManagement
             int c = BT_ID();
             Book b = new Book();
             string ph_id = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            b.ph_id= ph_id;
+            b.ph_id = ph_id;
             b.Name = edtTenSach.Text;
             b.author = edtTacGia.Text;
             b.amount = edtSoLuong.Text;
@@ -271,7 +315,7 @@ namespace LibraryManagement
             DataTable data = new DataTable();
             data = library.LoadDataBOOK();
             dataGridView1.DataSource = data;
-        
+
         }
 
         private void SearchBook_Click(object sender, EventArgs e)

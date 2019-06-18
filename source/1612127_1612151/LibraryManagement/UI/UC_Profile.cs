@@ -22,7 +22,7 @@ namespace LibraryManagement
 
         LibraryBUS library = new LibraryBUS();
 
-       
+
         public UC_Profile()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace LibraryManagement
             edtNewpassword.isPassword = true;
             edtRepassword.isPassword = true;
         }
-       
+
         public void LoadDataEmployee()
         {
             DataTable dt = library.LoadDataEmployee(OnUSName());
@@ -79,16 +79,22 @@ namespace LibraryManagement
             {
                 pw += buffer[i].ToString("x2");
             }
-            
+
             string a = edtNewpassword.Text;
             string b = edtRepassword.Text;
-            if (pass != pw) { 
-                MessageBox.Show("Mật khẩu hiện tại không đúng");
+            if (pass != pw)
+            {
+                MessageBox.Show("Mật khẩu hiện tại không đúng"); return;
             }
-            else if(a.Length < 5){
-                MessageBox.Show("Độ dài mật khẩu phải nhiều hơn 5 kí tự");
+            if (a == edtPassword.Text)
+            {
+                MessageBox.Show("Mật khẩu mới không được trùng với mật khẩu cũ"); return;
             }
-            else 
+            else if (a.Length < 5)
+            {
+                MessageBox.Show("Độ dài mật khẩu mới phải nhiều hơn 5 kí tự");
+            }
+            else
             {
                 if (a != b) MessageBox.Show("Mật khẩu nhập lại không đúng");
                 else
@@ -122,6 +128,6 @@ namespace LibraryManagement
             edtRepassword.isPassword = true;
         }
 
-     
+
     }
 }

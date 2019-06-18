@@ -16,7 +16,7 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
-        
+
         public DataTable LoadDataBOOK_TYPE()
         {
             string sql = "Select BTYPE_ID as N'Mã số', BTYPE AS N'Thể loại'from BOOK_TYPE";
@@ -38,11 +38,11 @@ namespace LibraryManagement.DAO
         }
         public int InsertBook_type(Book_type bt)
         {
-           string sql = string.Format("Insert into BOOK_TYPE values (N'{0}')",bt.BType);
+            string sql = string.Format("Insert into BOOK_TYPE values (N'{0}')", bt.BType);
 
-           var rs = ProcessData.Execute(sql);
+            var rs = ProcessData.Execute(sql);
 
-           return rs;
+            return rs;
         }
         public int EditBook_type(Book_type bt)
         {
@@ -50,7 +50,13 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.Execute(sql);
             return rs;
         }
-        
+
+        public DataTable CheckBook_typeValid(string query)
+        {
+            string sql = string.Format("SELECT NAME FROM BOOK, BOOK_TYPE WHERE BOOK.BTYPE_ID = BOOK_TYPE.BTYPE_ID AND BOOK_TYPE.BTYPE =N'{0}'", query);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
         public int DeleteBook_type(int id)
         {
             string sql = string.Format("Delete from BOOK_TYPE Where BTYPE_ID = '{0}'", id);
@@ -65,9 +71,10 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
+
         public int InsertPublish_House(Publishing_house ph)
         {
-            string sql = string.Format("Insert into PUBLISHING_HOUSE values ('',N'{0}',N'{1}','{2}','{3}')", ph.Name,ph.PH_address,ph.Phone_number,ph.Email);
+            string sql = string.Format("Insert into PUBLISHING_HOUSE values ('',N'{0}',N'{1}','{2}','{3}')", ph.Name, ph.PH_address, ph.Phone_number, ph.Email);
 
             var rs = ProcessData.Execute(sql);
 
@@ -75,8 +82,14 @@ namespace LibraryManagement.DAO
         }
         public int EditPublish_House(Publishing_house ph)
         {
-            string sql = string.Format("Update PUBLISHING_HOUSE Set Name = N'{1}',PH_ADDRESS= N'{2}',PHONE_NUMBER = '{3}',EMAIL = '{4}' Where PH_ID='{0}'", ph.PH_Id, ph.Name,ph.PH_address,ph.Phone_number,ph.Email);
+            string sql = string.Format("Update PUBLISHING_HOUSE Set Name = N'{1}',PH_ADDRESS= N'{2}',PHONE_NUMBER = '{3}',EMAIL = '{4}' Where PH_ID='{0}'", ph.PH_Id, ph.Name, ph.PH_address, ph.Phone_number, ph.Email);
             var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public DataTable CheckPublish_house(string query)
+        {
+            string sql = string.Format("SELECT BOOK.NAME FROM BOOK, PUBLISHING_HOUSE WHERE BOOK.PH_ID = PUBLISHING_HOUSE.PH_ID AND PUBLISHING_HOUSE.NAME =N'{0}'", query);
+            var rs = ProcessData.LoadData(sql);
             return rs;
         }
         public int DeletePublish_House(string id)
@@ -86,23 +99,23 @@ namespace LibraryManagement.DAO
 
             return rs;
         }
-        public DataTable SearchPublish_House(string column,string query)
+        public DataTable SearchPublish_House(string column, string query)
         {
-            string sql = string.Format("Select PH_ID as N'Mã nhà xuất bản', Name as N'Tên nhà xuất bản', PH_ADDRESS as N'Địa chỉ',PHONE_NUMBER as 'Số Điện thoại', EMAIL as 'Email' from PUBLISHING_HOUSE Where FREETEXT({0},N'{1}')", column,query);
+            string sql = string.Format("Select PH_ID as N'Mã nhà xuất bản', Name as N'Tên nhà xuất bản', PH_ADDRESS as N'Địa chỉ',PHONE_NUMBER as 'Số Điện thoại', EMAIL as 'Email' from PUBLISHING_HOUSE Where FREETEXT({0},N'{1}')", column, query);
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
 
         public DataTable GetDataNamePH()
         {
-            string sql = string.Format("Select PH_ID,NAME from PUBLISHING_HOUSE");
+            string sql = string.Format("Select NAME from PUBLISHING_HOUSE");
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
 
         public DataTable GetDataBookTypeName()
         {
-            string sql = string.Format("Select BTYPE_ID,BTYPE from BOOK_TYPE");
+            string sql = string.Format("Select BTYPE from BOOK_TYPE");
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
@@ -116,7 +129,7 @@ namespace LibraryManagement.DAO
         }
         public int EditReader(Reader rd)
         {
-            string sql = string.Format("Update READER Set NAME = N'{1}',DATE_OF_BIRTH= N'{2}',READER_ADDRESS = N'{3}',GENDER = N'{4}',PHONE_NUMBER=N'{5}',EMAIL=N'{6}' Where READER_ID='{0}'", rd.Reader_Id,rd.Name, rd.Date_of_birth, rd.Addres, rd.Gender, rd.Phone_number, rd.Email);
+            string sql = string.Format("Update READER Set NAME = N'{1}',DATE_OF_BIRTH= N'{2}',READER_ADDRESS = N'{3}',GENDER = N'{4}',PHONE_NUMBER=N'{5}',EMAIL=N'{6}' Where READER_ID='{0}'", rd.Reader_Id, rd.Name, rd.Date_of_birth, rd.Addres, rd.Gender, rd.Phone_number, rd.Email);
             var rs = ProcessData.Execute(sql);
             return rs;
         }
@@ -146,15 +159,15 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
-        public int InsertBook(Book b,string ph,int bt)
+        public int InsertBook(Book b, string ph, int bt)
         {
             string sql = string.Format("Insert into BOOK values ('',N'{0}',N'{1}','{2}',{3},{4},{5},N'{6}','{7}')", b.Name, b.author, ph, bt, b.price, b.amount, b.summary, b.publish_year);
             var rs = ProcessData.Execute(sql);
             return rs;
         }
-        public int EditBook(Book b,string ph,int bt)
+        public int EditBook(Book b, string ph, int bt)
         {
-            string sql = string.Format("Update BOOK Set NAME = N'{1}',AUTHOR= N'{2}',PH_ID = '{3}',BTYPE_ID = {4},PRICE = {5},AMOUNT={6},SUMMARY=N'{7}',PUBLISH_YEAR='{8}' Where BOOK_ID='{0}'",b.ph_id,b.Name, b.author, ph,bt,b.price, b.amount,b.summary,b.publish_year);
+            string sql = string.Format("Update BOOK Set NAME = N'{1}',AUTHOR= N'{2}',PH_ID = '{3}',BTYPE_ID = {4},PRICE = {5},AMOUNT={6},SUMMARY=N'{7}',PUBLISH_YEAR='{8}' Where BOOK_ID='{0}'", b.ph_id, b.Name, b.author, ph, bt, b.price, b.amount, b.summary, b.publish_year);
             var rs = ProcessData.Execute(sql);
             return rs;
         }
@@ -172,7 +185,7 @@ namespace LibraryManagement.DAO
             return rs;
         }
 
-        public DataTable FindAccount(string username,string password)
+        public DataTable FindAccount(string username, string password)
         {
             string sql = string.Format("Select Role FROM ACCOUNT where USERNAME='{0}' and PASS='{1}'", username, password);
             var rs = ProcessData.LoadData(sql);
@@ -180,21 +193,21 @@ namespace LibraryManagement.DAO
         }
         public DataTable LoadDataEmployee(string username)
         {
-            string sql = string.Format("Select * FROM EMPLOYEE Where USERNAME = '{0}'",username);
+            string sql = string.Format("Select * FROM EMPLOYEE Where USERNAME = '{0}'", username);
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
 
         public int EditEmployee(Employee ep)
         {
-            string sql = string.Format("Update EMPLOYEE SET NAME=N'{2}',EMPLOYEE_ADDRESS=N'{3}',EMAIL='{4}',PHONE_NUMBER='{5}',DATE_OF_BIRTH='{6}',GENDER=N'{7}' WHERE USERNAME ='{1}'", ep.Employee_ID,ep.UserName, ep.Name, ep.Employee_Addres, ep.Email, ep.Phone_number, ep.Date_of_birth, ep.Gender);
+            string sql = string.Format("Update EMPLOYEE SET NAME=N'{2}',EMPLOYEE_ADDRESS=N'{3}',EMAIL='{4}',PHONE_NUMBER='{5}',DATE_OF_BIRTH='{6}',GENDER=N'{7}' WHERE USERNAME ='{1}'", ep.Employee_ID, ep.UserName, ep.Name, ep.Employee_Addres, ep.Email, ep.Phone_number, ep.Date_of_birth, ep.Gender);
             var rs = ProcessData.Execute(sql);
             return rs;
         }
 
         public DataTable LoadDataAccount(string us)
         {
-            string sql = string.Format("Select PASS from ACCOUNT WHERE USERNAME ='{0}'",us);
+            string sql = string.Format("Select PASS from ACCOUNT WHERE USERNAME ='{0}'", us);
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
@@ -218,5 +231,5 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
-      }
+    }
 }
