@@ -102,6 +102,7 @@
             this.bunifuImageButton5.TabIndex = 19;
             this.bunifuImageButton5.TabStop = false;
             this.bunifuImageButton5.Zoom = 10;
+         
             // 
             // bunifuDropdown2
             // 

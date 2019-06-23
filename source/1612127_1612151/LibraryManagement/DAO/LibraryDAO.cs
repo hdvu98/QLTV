@@ -231,5 +231,154 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.LoadData(sql);
             return rs;
         }
+
+        public DataTable LoadDataBorrow_Form()
+        {
+            string sql = string.Format("SELECT FORM_ID AS N'Mã phiếu', READER.NAME AS N'Độc giả', EMPLOYEE.EMPLOYEE_ID AS N'Mã nhân viên', LOAN_DATE AS N'Ngày mượn', EXP_DATE AS N'Ngày trả', DEPOSIT AS N'Phí' FROM BORROW_FORM, READER, EMPLOYEE WHERE BORROW_FORM.EMPLOYEE_ID = EMPLOYEE.EMPLOYEE_ID and READER.READER_ID = BORROW_FORM.READER_ID ");
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        
+        public DataTable LoadDataBorrow_FormDetails(string form_id)
+        {
+            string sql = string.Format("SELECT bfd.ID, b.BOOK_ID as N'Mã sách' ,b.NAME as N'Tên sách', bt.BTYPE as N'Tên thể loại', b.PRICE as N'Giá sách' FROM BOOK b,BORROW_DETAILS bfd, BORROW_FORM bf, BOOK_TYPE bt WHERE bfd.FORM_ID = bf.FORM_ID AND bfd.BOOK_ID = b.BOOK_ID AND bt.BTYPE_ID = b.BTYPE_ID and bf.FORM_ID ='{0}' order by b.BOOK_ID asc", form_id);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public DataTable GetIDFromNameBook()
+        {
+            string sql = string.Format("Select BOOK_ID From BOOK");
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public DataTable GetIDFromReader()
+        {
+            string sql = string.Format("Select READER_ID,NAME From READER");
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public int InsertBorrowForm(Borrow_Form bf)
+        {
+            string sql = string.Format("INSERT INTO BORROW_FORM VALUES ('','{0}','{1}','{2}','{3}',{4})", bf.Reader_ID, bf.Employee_ID, bf.LOAN_date, bf.EXP_date, bf.Deposit);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+
+        public int InsertBorrowFormDetails(Borrow_Details bd)
+        {
+            string sql = string.Format("INSERT INTO BORROW_DETAILS VALUES ('','{0}','{1}',{2})", bd.Form_ID, bd.BOOK_ID, bd.Amount);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+
+        public DataTable GetIDFromBorrowForm()
+        {
+            string sql = string.Format("Select FORM_ID From BORROW_FORM");
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public int EditBorrowForm(Borrow_Form bf)
+        {
+            string sql = string.Format("UPDATE BORROW_FORM SET READER_ID ='{1}',LOAN_DATE ='{2}', EXP_DATE='{3}',DEPOSIT={4} WHERE FORM_ID = '{0}' ", bf.Form_ID,bf.Reader_ID, bf.LOAN_date, bf.EXP_date, bf.Deposit);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public int EditBorrowFormDetails(Borrow_Details bd)
+        {
+            string sql = string.Format("UPDATE BORROW_DETAILS SET BOOK_ID = '{1}', AMOUNT = {2} WHERE ID ='{0}'",bd.ID,bd.BOOK_ID, bd.Amount); 
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public DataTable CheckBorrowFormDetailsValid(string query)
+        {
+            string sql = string.Format("SELECT bd.FORM_ID FROM BORROW_FORM bf, BORROW_DETAILS bd WHERE bf.FORM_ID = bd.FORM_ID AND bf.FORM_ID ='{0}' ",query);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public int DeleteBorrowForm_Details(string query)
+        {
+            string sql = string.Format("DELETE from BORROW_DETAILS WHERE ID='{0}'", query);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public int DeleteBorrowForm(string query)
+        {
+             string sql = string.Format("DELETE from BORROW_FORM WHERE FORM_ID = '{0}'", query);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public DataTable LoadDataPayForm()
+        {
+            string sql = string.Format("SELECT ID as N'Mã phiếu trả',BORROW_ID as N'Mã phiếu mượn',Employee_ID as N'Nhân viên lập phiếu', PAY_DATE as N'Ngày trả' FROM PAY_FORM");
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public DataTable GetTienBook(string query)
+        {
+            string sql = string.Format("SELECT PRICE FROM BOOK WHERE BOOK_ID = '{0}'",query);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public int UpdateGiaTien()
+        {
+            string sql = string.Format("UPDATE BORROW_FORM SET DEPOSIT = (SELECT SUM(AMOUNT) AS N'Tổng tiền' FROM BORROW_DETAILS WHERE BORROW_FORM.FORM_ID = BORROW_DETAILS.FORM_ID)");
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public int UpdateTienCoc()
+        {
+            string sql = string.Format("UPDATE BORROW_DETAILS SET AMOUNT = (SELECT PRICE FROM BOOK WHERE BORROW_DETAILS.BOOK_ID = BOOK.BOOK_ID)");
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+
+        public DataTable LoadDataPay_FormDetails(string payformId)
+        {
+            string sql = string.Format("SELECT DISTINCT PAY_DETAILS.ID AS N'Mã phiếu', PAY_DETAILS.BOOK_ID as N'Mã sách', BOOK.NAME as N'Tên sách',PAY_DETAILS.AMOUNT as N'Tiền phạt' FROM PAY_DETAILS,BOOK,PAY_FORM, BORROW_DETAILS WHERE BOOK.BOOK_ID = PAY_DETAILS.BOOK_ID AND PAY_DETAILS.FORM_ID = PAY_FORM.ID  AND PAY_FORM.ID ='{0}'",payformId);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+    
+        public DataTable CheckBookIDHaveBorrowDetails(string book_id)
+        {
+            string sql = string.Format("SELECT BOOK_ID FROM BORROW_DETAILS,BORROW_FORM WHERE BORROW_FORM.FORM_ID = BORROW_DETAILS.FORM_ID AND BORROW_DETAILS.FORM_ID ='{0}'", book_id);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public DataTable GetSoLuongSach(string query)
+        {
+            string sql = string.Format("SELECT AMOUNT FROM BOOK WHERE BOOK_ID = '{0}'", query);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public int UpDateSoLuongBook(string soluong,string masach)
+        {
+            string sql = string.Format("UPDATE BOOK SET AMOUNT ='{1}' WHERE BOOK_ID ='{0}'",masach,soluong);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
+        public DataTable GetTienCoc(string id)
+        {
+            string sql = string.Format("SELECT DISTINCT BORROW_DETAILS.AMOUNT FROM BORROW_DETAILS, PAY_DETAILS WHERE BORROW_DETAILS.BOOK_ID = PAY_DETAILS.BOOK_ID AND PAY_DETAILS.ID ='{0}'",id);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+        public DataTable GetMaDocGia(string id)
+        {
+            string sql = string.Format("SELECT DISTINCT BORROW_FORM.READER_ID FROM BORROW_DETAILS, PAY_DETAILS,BORROW_FORM WHERE BORROW_DETAILS.BOOK_ID = PAY_DETAILS.BOOK_ID AND BORROW_FORM.FORM_ID = BORROW_DETAILS.FORM_ID AND BORROW_FORM.FORM_ID ='{0}'", id);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public int InsertPayForm(Pay_form pf)
+        {
+            string sql = string.Format("INSERT INTO PAY_FORM VALUES('','{0}','{1}','{2}')", pf.Borrow_form, pf.Employee_id, pf.Pay_date);
+            var rs = ProcessData.Execute(sql);
+            return rs;
+        }
     }
 }

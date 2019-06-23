@@ -164,5 +164,100 @@ namespace LibraryManagement.DAO
         {
             return library.FindNameAccount(username);
         }
+
+        public DataTable LoadDataBorrow_Form()
+        {
+            return library.LoadDataBorrow_Form();
+        }
+        public DataTable LoadDataBorrow_FormDetails(string form_id)
+        {
+            return library.LoadDataBorrow_FormDetails(form_id);
+        }
+        public DataTable GetIDFromNameBook()
+        {
+            return library.GetIDFromNameBook();
+        }
+        public DataTable GetIDFromReader()
+        {
+            return library.GetIDFromReader();
+        }
+        public int InsertBorrowForm(Borrow_Form bf)
+        {
+            return library.InsertBorrowForm(bf);
+        }
+        public int InsertBorrowFormDetails(Borrow_Details bd)
+        {
+            return library.InsertBorrowFormDetails(bd);
+        }
+        public DataTable GetIDFromBorrowForm()
+        {
+            return library.GetIDFromBorrowForm();
+        }
+        public int EditBorrowForm(Borrow_Form bf)
+        {
+           return library.EditBorrowForm(bf);
+        }
+        public int EditBorrowFormDetails(Borrow_Details bd)
+        {
+            return library.EditBorrowFormDetails(bd);
+        }
+        public DataTable CheckBorrowFormDetailsValid(string query)
+        {
+            return library.CheckBorrowFormDetailsValid(query);
+        }
+        public int DeleteBorrowForm_Details(string query)
+        {
+            return library.DeleteBorrowForm_Details(query);
+        }
+        public int DeleteBorrowForm(string query)
+        {
+            return library.DeleteBorrowForm(query);
+        }
+        public DataTable LoadDataPayForm()
+        {
+            return library.LoadDataPayForm();
+        }
+        public DataTable GetTienBook(string query)
+        {
+            return library.GetTienBook(query);
+        }
+        public int UpdateGiaTien()
+        {
+            return library.UpdateGiaTien();
+        }
+
+        public int UpdateTienCoc()
+        {
+            return library.UpdateTienCoc();
+        }
+
+        public DataTable LoadDataPay_FormDetails(string payformId)
+        {
+            return library.LoadDataPay_FormDetails(payformId);
+        }
+        public DataTable CheckBookIDHaveBorrowDetails(string book_id)
+        {
+            return library.CheckBookIDHaveBorrowDetails(book_id);
+        }
+        public DataTable GetSoLuongSach(string query)
+        {
+            return library.GetSoLuongSach(query);
+        }
+        public int UpDateSoLuongBook(string soluong, string masach)
+        {
+            return library.UpDateSoLuongBook(soluong, masach);
+        }
+        public DataTable GetTienCoc(string id)
+        {
+            return library.GetTienCoc(id);
+        }
+        public DataTable GetMaDocGia(string id) 
+        {
+            return library.GetMaDocGia(id);
+        }
+        public int InsertPayForm(Pay_form pf)
+        {
+            return library.InsertPayForm(pf);
+        }
     }
 }

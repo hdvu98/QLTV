@@ -27,9 +27,9 @@ namespace LibraryManagement
         {
             InitializeComponent();
             Bunifu.Framework.Lib.Elipse.Apply(this, 15);
-            btnQLPhieu.selected = true;
+            //btnQLPhieu.selected = true;
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Form());
+            //control_area.Controls.Add(new UC_Form());
 
         }
         public string CallPassWord()
@@ -115,8 +115,12 @@ namespace LibraryManagement
         private void btnQLPhieu_Click(object sender, EventArgs e)
         {
             control_area.Controls.Clear();
-            control_area.Controls.Add(new UC_Form());
+            UC_Form uc_form = new UC_Form();
+            uc_form.OnUSName += delegate { return Call(); };
+            control_area.Controls.Add(uc_form);
             toggler(sender);
+            uc_form.LoadDataBorrowForm();
+            uc_form.LoadDataPayForm();
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)

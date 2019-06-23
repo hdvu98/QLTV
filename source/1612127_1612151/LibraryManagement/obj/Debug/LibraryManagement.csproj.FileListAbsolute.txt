@@ -128,7 +128,6 @@ C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\Lib
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\bin\Debug\LiveCharts.Wpf.xml
-C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Login.resources
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.fm_Dashboard.resources
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
@@ -139,3 +138,4 @@ C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\Lib
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Reader.resources
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.UC_Stat.resources
 C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csproj.GenerateResource.Cache
+C:\Users\Giang\Documents\GitHub\QLTV\Quan-Ly-Thu-Vien\source\1612127_1612151\LibraryManagement\obj\Debug\LibraryManagement.csprojResolveAssemblyReference.cache

@@ -87,7 +87,11 @@
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Book.cs" />
     <Compile Include="DTO\Book_type.cs" />
+    <Compile Include="DTO\Borrow_Details.cs" />
+    <Compile Include="DTO\Borrow_Form.cs" />
     <Compile Include="DTO\Employee.cs" />
+    <Compile Include="DTO\Pay_details.cs" />
+    <Compile Include="DTO\Pay_form.cs" />
     <Compile Include="DTO\Publishing_house.cs" />
     <Compile Include="DTO\Reader.cs" />
     <Compile Include="UI\fm_DangNhap.cs">
