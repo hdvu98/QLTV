@@ -66,7 +66,7 @@
             this.tab_profile.Controls.Add(this.tabPassword);
             this.tab_profile.Location = new System.Drawing.Point(0, 0);
             this.tab_profile.Name = "tab_profile";
-            this.tab_profile.SelectedIndex = 1;
+            this.tab_profile.SelectedIndex = 0;
             this.tab_profile.Size = new System.Drawing.Size(984, 554);
             this.tab_profile.TabIndex = 0;
             this.tab_profile.UseSelectable = true;
@@ -110,7 +110,7 @@
             this.btnSaveInfo.ActiveForecolor = System.Drawing.Color.White;
             this.btnSaveInfo.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
             this.btnSaveInfo.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.btnSaveInfo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSaveInfo.BackColor = System.Drawing.Color.Transparent;
             this.btnSaveInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSaveInfo.BackgroundImage")));
             this.btnSaveInfo.ButtonText = "Cập nhật";
             this.btnSaveInfo.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -136,7 +136,7 @@
             this.edtData_of_birth.ForeColor = System.Drawing.Color.White;
             this.edtData_of_birth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.edtData_of_birth.FormatCustom = null;
-            this.edtData_of_birth.Location = new System.Drawing.Point(196, 214);
+            this.edtData_of_birth.Location = new System.Drawing.Point(196, 216);
             this.edtData_of_birth.Name = "edtData_of_birth";
             this.edtData_of_birth.Size = new System.Drawing.Size(262, 35);
             this.edtData_of_birth.TabIndex = 16;

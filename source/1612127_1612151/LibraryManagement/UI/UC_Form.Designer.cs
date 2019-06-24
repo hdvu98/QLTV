@@ -437,7 +437,7 @@
             this.tabForm.Controls.Add(this.tabTra);
             this.tabForm.Location = new System.Drawing.Point(0, 0);
             this.tabForm.Name = "tabForm";
-            this.tabForm.SelectedIndex = 1;
+            this.tabForm.SelectedIndex = 0;
             this.tabForm.Size = new System.Drawing.Size(984, 554);
             this.tabForm.TabIndex = 1;
             this.tabForm.UseSelectable = true;
@@ -469,29 +469,30 @@
             // CheckD
             // 
             this.CheckD.AutoSize = true;
-            this.CheckD.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CheckD.BackColor = System.Drawing.Color.Transparent;
             this.CheckD.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckD.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CheckD.ForeColor = System.Drawing.Color.Black;
             this.CheckD.Location = new System.Drawing.Point(501, 211);
             this.CheckD.Name = "CheckD";
-            this.CheckD.Size = new System.Drawing.Size(70, 21);
+            this.CheckD.Size = new System.Drawing.Size(207, 21);
             this.CheckD.TabIndex = 53;
             this.CheckD.TabStop = true;
-            this.CheckD.Text = "Check";
+            this.CheckD.Text = "Nhập chi tiết phiếu mượn";
             this.CheckD.UseVisualStyleBackColor = false;
             // 
             // CheckC
             // 
             this.CheckC.AutoSize = true;
-            this.CheckC.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CheckC.BackColor = System.Drawing.Color.Transparent;
+            this.CheckC.Checked = true;
             this.CheckC.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckC.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CheckC.Location = new System.Drawing.Point(351, 211);
+            this.CheckC.ForeColor = System.Drawing.Color.Black;
+            this.CheckC.Location = new System.Drawing.Point(268, 213);
             this.CheckC.Name = "CheckC";
-            this.CheckC.Size = new System.Drawing.Size(70, 21);
+            this.CheckC.Size = new System.Drawing.Size(153, 21);
             this.CheckC.TabIndex = 52;
             this.CheckC.TabStop = true;
-            this.CheckC.Text = "Check";
+            this.CheckC.Text = "Nhập phiếu mượn";
             this.CheckC.UseVisualStyleBackColor = false;
             // 
             // label5
@@ -935,29 +936,30 @@
             // CheckB
             // 
             this.CheckB.AutoSize = true;
-            this.CheckB.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CheckB.BackColor = System.Drawing.Color.Transparent;
             this.CheckB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckB.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CheckB.Location = new System.Drawing.Point(502, 208);
+            this.CheckB.ForeColor = System.Drawing.Color.Black;
+            this.CheckB.Location = new System.Drawing.Point(501, 210);
             this.CheckB.Name = "CheckB";
-            this.CheckB.Size = new System.Drawing.Size(70, 21);
+            this.CheckB.Size = new System.Drawing.Size(188, 21);
             this.CheckB.TabIndex = 52;
             this.CheckB.TabStop = true;
-            this.CheckB.Text = "Check";
+            this.CheckB.Text = "Nhập chi tiết phiếu trả";
             this.CheckB.UseVisualStyleBackColor = false;
             // 
             // CheckA
             // 
             this.CheckA.AutoSize = true;
-            this.CheckA.BackColor = System.Drawing.SystemColors.Highlight;
+            this.CheckA.BackColor = System.Drawing.Color.Transparent;
+            this.CheckA.Checked = true;
             this.CheckA.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CheckA.Location = new System.Drawing.Point(352, 208);
+            this.CheckA.ForeColor = System.Drawing.Color.Black;
+            this.CheckA.Location = new System.Drawing.Point(288, 210);
             this.CheckA.Name = "CheckA";
-            this.CheckA.Size = new System.Drawing.Size(70, 21);
+            this.CheckA.Size = new System.Drawing.Size(134, 21);
             this.CheckA.TabIndex = 51;
             this.CheckA.TabStop = true;
-            this.CheckA.Text = "Check";
+            this.CheckA.Text = "Nhập phiếu trả";
             this.CheckA.UseVisualStyleBackColor = false;
             // 
             // label15
@@ -1020,6 +1022,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
             this.panel2.Controls.Add(this.btnDeletephieutra);
             this.panel2.Controls.Add(this.bunifuDropdown1);
             this.panel2.Controls.Add(this.pictureBox2);

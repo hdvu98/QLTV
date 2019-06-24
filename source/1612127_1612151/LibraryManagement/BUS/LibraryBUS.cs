@@ -259,5 +259,13 @@ namespace LibraryManagement.DAO
         {
             return library.InsertPayForm(pf);
         }
+        public DataTable thongKePhieuMuonTheoNgay(string start,string end)
+        {
+            return library.thongKePhieuMuonTheoNgay(start, end);
+        }
+        public DataTable thongKePhieuMuonTheoThang(string month,string year)
+        {
+            return library.thongKePhieuMuonTheoThang(month, year);
+        }
     }
 }

@@ -380,5 +380,18 @@ namespace LibraryManagement.DAO
             var rs = ProcessData.Execute(sql);
             return rs;
         }
+        public DataTable thongKePhieuMuonTheoNgay(string start, string end)
+        {
+            string sql = string.Format("select Loan_date as 'Ngày', count(BORROW_FORM.FORM_ID) as N'Số lượng phiếu mượn' from BORROW_FORM where Loan_date >='{0}' and loan_date <='{1}' group by LOAN_DATE",start,end);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
+
+        public DataTable thongKePhieuMuonTheoThang(string month,string year)
+        {
+            string sql = string.Format("select Loan_date as 'Ngày', count(BORROW_FORM.FORM_ID) as N'Số lượng phiếu mượn' from BORROW_FORM where month(Loan_date)='{0}' and year(loan_date)='{1}'  group by LOAN_DATE", month,year);
+            var rs = ProcessData.LoadData(sql);
+            return rs;
+        }
     }
 }
